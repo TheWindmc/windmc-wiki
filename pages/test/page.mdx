@@ -1,0 +1,261 @@
+# Тестовая страница крафтов
+
+Эта страница демонстрирует все возможности системы крафтов для вики Wind.
+
+## Фигурные крафты (Shaped)
+
+### Алмазная кирка
+
+<RecipeTitle>Алмазная кирка</RecipeTitle>
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["diamond", "diamond", "diamond"],
+    [null, "stick", null],
+    [null, "stick", null]
+  ]}
+  result="diamond_pickaxe"
+/>
+
+### Железный меч
+
+<RecipeTitle>Железный меч</RecipeTitle>
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    [null, "iron_ingot", null],
+    [null, "iron_ingot", null],
+    [null, "stick", null]
+  ]}
+  result="iron_sword"
+/>
+
+### Факелы
+
+<RecipeTitle>Факелы (4 штуки)</RecipeTitle>
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    [null, "coal", null],
+    [null, "stick", null],
+    [null, null, null]
+  ]}
+  result="torch"
+  resultCount={4}
+/>
+
+### Верстак
+
+<RecipeTitle>Верстак</RecipeTitle>
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["oak_planks", "oak_planks", null],
+    ["oak_planks", "oak_planks", null],
+    [null, null, null]
+  ]}
+  result="crafting_table"
+/>
+
+## Бесформенные крафты (Shapeless)
+
+### Огненный заряд
+
+<RecipeTitle>Огненный заряд</RecipeTitle>
+
+<CraftingRecipe
+  type="shapeless"
+  ingredients={["blaze_powder", "coal", "gunpowder"]}
+  result="fire_charge"
+  resultCount={3}
+/>
+
+### Фиолетовый краситель
+
+<RecipeTitle>Фиолетовый краситель</RecipeTitle>
+
+<CraftingRecipe
+  type="shapeless"
+  ingredients={["lapis_lazuli", "red_dye"]}
+  result="purple_dye"
+  resultCount={2}
+/>
+
+### Око Края
+
+<RecipeTitle>Око Края</RecipeTitle>
+
+<CraftingRecipe
+  type="shapeless"
+  ingredients={["ender_pearl", "blaze_powder"]}
+  result="ender_eye"
+/>
+
+### Книга с пером
+
+<RecipeTitle>Книга с пером</RecipeTitle>
+
+<CraftingRecipe
+  type="shapeless"
+  ingredients={["book", "feather", "ink_sac"]}
+  result="writable_book"
+/>
+
+## Плавка в печи (Smelting)
+
+### Железный слиток
+
+<RecipeTitle>Плавка железной руды</RecipeTitle>
+
+<CraftingRecipe
+  type="smelting"
+  ingredient="iron_ore"
+  result="iron_ingot"
+  fuel="coal"
+/>
+
+### Золотой слиток
+
+<RecipeTitle>Плавка золотой руды</RecipeTitle>
+
+<CraftingRecipe
+  type="smelting"
+  ingredient="raw_gold"
+  result="gold_ingot"
+  fuel="coal"
+/>
+
+### Стекло
+
+<RecipeTitle>Плавка песка</RecipeTitle>
+
+<CraftingRecipe
+  type="smelting"
+  ingredient="sand"
+  result="glass"
+  fuel="charcoal"
+/>
+
+## Плавильная печь (Blasting)
+
+### Незеритовый скрап
+
+<RecipeTitle>Плавка древних обломков</RecipeTitle>
+
+<CraftingRecipe
+  type="blasting"
+  ingredient="ancient_debris"
+  result="netherite_scrap"
+/>
+
+### Быстрая плавка руды
+
+<RecipeTitle>Железо в плавильне</RecipeTitle>
+
+<CraftingRecipe
+  type="blasting"
+  ingredient="deepslate_iron_ore"
+  result="iron_ingot"
+/>
+
+## Коптильня (Smoking)
+
+### Жареная курица
+
+<RecipeTitle>Приготовление курицы</RecipeTitle>
+
+<CraftingRecipe
+  type="smoking"
+  ingredient="raw_chicken"
+  result="cooked_chicken"
+/>
+
+### Жареная свинина
+
+<RecipeTitle>Приготовление свинины</RecipeTitle>
+
+<CraftingRecipe
+  type="smoking"
+  ingredient="raw_porkchop"
+  result="cooked_porkchop"
+/>
+
+## Костёр (Campfire)
+
+### Печёная треска
+
+<RecipeTitle>Приготовление рыбы на костре</RecipeTitle>
+
+<CraftingRecipe
+  type="campfire"
+  ingredient="raw_cod"
+  result="cooked_cod"
+/>
+
+### Жареная говядина
+
+<RecipeTitle>Приготовление говядины на костре</RecipeTitle>
+
+<CraftingRecipe
+  type="campfire"
+  ingredient="raw_beef"
+  result="cooked_beef"
+/>
+
+---
+
+## Комбинированный пример
+
+Вот как можно показать несколько связанных крафтов подряд:
+
+### Создание верстака
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["oak_planks", "oak_planks", null],
+    ["oak_planks", "oak_planks", null],
+    [null, null, null]
+  ]}
+  result="crafting_table"
+/>
+
+### Создание палок
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    [null, "oak_planks", null],
+    [null, "oak_planks", null],
+    [null, null, null]
+  ]}
+  result="stick"
+  resultCount={4}
+/>
+
+### Создание деревянной кирки
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["oak_planks", "oak_planks", "oak_planks"],
+    [null, "stick", null],
+    [null, "stick", null]
+  ]}
+  result="wooden_pickaxe"
+/>
+
+---
+
+## Примечания
+
+- Все иконки загружаются из `windmc-wiki/items/`
+- Если иконка не найдена, отображаются первые 3 буквы ID предмета
+- При наведении на предмет показывается его полное название
+- Система адаптивна для мобильных устройств
+
+**Статус:** Тестовая страница для проверки системы крафтов ✨
