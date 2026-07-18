@@ -90,14 +90,34 @@ description: "Приватный сервер, созданный для дру�
 
 ### Использование
 
-Нажмите `F` (смена рук), чтобы активировать дымовую шашку.
+Нажмите `ПКМ`, чтобы активировать дымовую шашку.
 
 При активации игрок получает:
 - **Невидимость** на 30 секунд
 - **Скорость** на 30 секунд
 - Визуальный эффект дыма вокруг игрока
 
-Имеет кулдаун 2 минуты между использованиями.
+Имеет кулдаун 1 минуту между использованиями.
+
+### Крафт
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    [null, null, "iron_nugget"],
+    ["green_dye", "netherite_scrap", "green_dye"],
+    ["iron_ingot", "iron_ingot", "iron_ingot"]
+  ]}
+  result="smoke_bomb"
+/>
+
+## Перцовый баллончик
+
+Перцовый баллончик распыляется и даёт игрокам рядом эффекты слепоты и слабости. Появился в третьем сезоне, доступен всем игрокам.
+
+### Использование
+
+Используйте баллончик, чтобы распылить его на игроков поблизости. Кулдауна нет, но баллончик рассчитан всего на 5 использований.
 
 ### Крафт
 
@@ -105,10 +125,30 @@ description: "Приватный сервер, созданный для дру�
   type="shaped"
   pattern={[
     ["iron_ingot", "iron_ingot", "iron_ingot"],
-    ["green_dye", "gunpowder", "green_dye"],
-    ["iron_ingot", "oxidized_lightning_rod", "iron_ingot"]
+    ["iron_ingot", "redstone", "iron_ingot"],
+    ["iron_ingot", "redstone", "iron_ingot"]
   ]}
-  result="smoke_bomb"
+  result="pepper_spray"
+/>
+
+## Тазер
+
+Тазер временно станит игрока.
+
+### Использование
+
+Используйте тазер по игроку, чтобы застать его на короткое время. Между использованиями есть кулдаун.
+
+### Крафт
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["copper_ingot", "copper_ingot", "copper_ingot"],
+    ["copper_ingot", "redstone", "copper_ingot"],
+    ["copper_ingot", "copper_ingot", "copper_ingot"]
+  ]}
+  result="taser"
 />
 
 ## Наручники
