@@ -74,6 +74,28 @@ description: "Приватный сервер, созданный для дру�
   result="cigarette_pack_empty"
 />
 
+## Маска
+
+![Маска](/assets/items/mask_inv.png)
+
+Надевая маску вы становитесь невидемым для других игроков.
+
+### Использование
+
+Кулдаун маски 2 минуты, Всего 12 использований на одну маску
+
+### Крафт
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["paper", "white_dye", "paper"],
+    ["leather", "string", "leather"],
+    ["armadillo_scute", "black_dye", "armadillo_scute"]
+  ]}
+  result="mask"
+/>
+
 ### Использование
 
 Зажмите `Shift` и нажмите `ПКМ` по пачке, чтобы извлечь одну сигарету.
@@ -113,6 +135,8 @@ description: "Приватный сервер, созданный для дру�
 
 ## Перцовый баллончик
 
+![Перцовый баллончик](/assets/items/pepper_spray_inv.png)
+
 Перцовый баллончик распыляется и даёт игрокам рядом эффекты слепоты и слабости. Появился в третьем сезоне, доступен всем игрокам.
 
 ### Использование
@@ -124,14 +148,38 @@ description: "Приватный сервер, созданный для дру�
 <CraftingRecipe
   type="shaped"
   pattern={[
-    ["iron_ingot", "iron_ingot", "iron_ingot"],
-    ["iron_ingot", "redstone", "iron_ingot"],
+    ["null", "tripwire_hook", "null"],
+    ["iron_ingot", "red_dye", "iron_ingot"],
     ["iron_ingot", "redstone", "iron_ingot"]
   ]}
   result="pepper_spray"
 />
 
+## Линейка
+
+![Линейка](/assets/items/ruler_inv.png)
+
+Инструмент для измерения расстояния.
+
+### Использование
+
+Нажмите `ЛКМ` по блоку чтобы отметить точку A. Нажмите `ПКМ` чтобы замерить расстояния и высоты.
+
+### Крафт
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["null", "bamboo_planks", "null"],
+    ["null", "stick", "null"],
+    ["null", "bamboo_planks", "null"]
+  ]}
+  result="ruler"
+/>
+
 ## Тазер
+
+![Тазер](/assets/items/taser_inv.png)
 
 Тазер временно станит игрока.
 
@@ -144,12 +192,31 @@ description: "Приватный сервер, созданный для дру�
 <CraftingRecipe
   type="shaped"
   pattern={[
-    ["copper_ingot", "copper_ingot", "copper_ingot"],
-    ["copper_ingot", "redstone", "copper_ingot"],
-    ["copper_ingot", "copper_ingot", "copper_ingot"]
+    ["null", "iron_ingot", "tripwire_hook"],
+    ["netherite_scrap", "crossbow", "iron_ingot"],
+    ["iron_ingot", "netherite_scrap", "null"]
   ]}
   result="taser"
 />
+
+## Патрон тазера
+
+![Патрон тазер](/assets/items/taser_cartridge_inv.png)
+
+Заряд для тазера.
+
+### Крафт
+
+<CraftingRecipe
+  type="shaped"
+  pattern={[
+    ["null", "null", "null"],
+    ["iron_ingot", "arrow", "iron_ingot"],
+    ["iron_ingot", "yellow_dye", "iron_ingot"]
+  ]}
+  result="taser_cartridge"
+/>
+
 
 ## Наручники
 
